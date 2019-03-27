@@ -1,3 +1,4 @@
+@import "site.vars.less";
 /*公共样式*/
 * {
   margin: 0;
@@ -9,8 +10,7 @@ html, body {
 }
 
 html {
-  background: url("./../static/img/bk.jpg");
-
+  background: @html_bk_color;
 }
 
 .clearfix {
@@ -55,4 +55,42 @@ textarea {
   [data-dpr="3"] & {
     font-size: @font-size * 3;
   }
+}
+//主题——大标题
+.theme{
+  margin-top: 20px;
+  .font-dpr(28px);
+}
+//闪算页面的数字显示
+.content{
+  margin-top: 30px;
+  font-size: 50px;
+  color:@con_num_color ;
+}
+//按钮样式
+.butBox{
+  margin-top: 50%;
+  transform: translateY(-50%);
+  .but{
+    line-height: 2rem;
+    width: 7rem;
+  }
+}
+.but{
+  font-size: (26px);
+  font-family: 'Comic Sans MS', sans-serif;
+  background: @but_bk_color;
+  border: @nav_bk_color 1px solid;
+}
+
+//弹层
+.wrap{
+  width: 8rem;
+  position: fixed;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-60%);
+  background: @warp_bk_color;
+  padding:0.5rem;
+  box-sizing: border-box;
 }
